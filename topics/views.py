@@ -5,4 +5,4 @@ from .models import Topic
 
 def index(request):
     topics = Topic.objects.all()
-    return HttpResponse(topics)
+    return HttpResponse(render(request, 'topics/index.html', {'topics': topics}))
