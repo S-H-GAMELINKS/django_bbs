@@ -1,9 +1,15 @@
 {% if topics %}
     <ul>
     {% for topic in topics %}
-        <li><a href="/topics"/{{topic.id}}/>{{topic.title_text}}</a></li>
+        <li><a href="/topics/{{topic.id}}/">{{topic.title_text}}</a></li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No Topics are available.</p>
 {% endif %} 
+
+<form action="/topics/create" method="POST">
+    {% csrf_token %}
+    {{ topics_form }}
+    <input type="submit" value="作成"/>
+</form>
