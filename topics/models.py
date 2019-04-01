@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Topic(models.Model):
+    title_text = models.CharField((max_length=30))
+    content_text = models.CharField(max_length=140)
+    
