@@ -1,3 +1,4 @@
 db.sqlite3
 /django_bbs/__pycache__
 /topics/__pycache__
+/topics/migrations/__pycache__
